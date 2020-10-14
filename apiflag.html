@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <script>
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://restcountries.eu/rest/v2/all', true);
+        request.send();
+        request.onload = function() {
+            var data = JSON.parse(this.response);
+            for (var x of data) {
+                console.log(x.flag);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
